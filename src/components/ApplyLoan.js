@@ -3,16 +3,23 @@ const ApplyLoan = () => {
         <div>
             <h2>Apply for Loan</h2>
             <form>
-                <div>
+                <div className="col">
+                <div className="form-block">
                 <label>Loan Amount</label>
                 <input type="text"></input>
                 </div>
-                <div>
-                <label>ada</label>
+                <div className="form-block">
+                <label>Item Description</label>
+                <input type="text"></input>
+                </div>
+                </div>
+                <div className="col">
+                <div className="form-block">
+                <label>Item Value</label>
                 <input type="number"></input>
                 </div>
-                
-                <button type="submit">Login</button>
+                </div>
+                <button className="button" type="submit">Apply Loan</button>
             </form>
         </div>
     )
