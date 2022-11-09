@@ -30,12 +30,19 @@ myHeaders.append("Content-Type", "application/json");
       // let items=JSON.stringify(value)
       console.log(items.length)
 
-      const myitems=items.map(item=><li key={item.issueId}>{item.itemDescription}</li>)
+      const myitems=items.map(item=><tr key={item.issueId}><td>{item.itemValuation}</td><td>{item.itemDescription}</td><td>{item.itemCategory}</td></tr>
+    )
       // console.log(typeof(items))
     return (
         <div>
             List of Items Purchased
-      {/* <div>{JSON.stringify(value, null, 2)}</div> */}
+      <tr>
+                <th>category</th>
+                <th>description</th>
+                <th>value</th>
+
+            </tr>
+
       {myitems}
         </div>
     )
