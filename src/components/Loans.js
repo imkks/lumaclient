@@ -11,7 +11,7 @@ const Loans = () => {
         redirect: 'follow'
       };
       const { loading, error, value } = useFetch(
-        `http://localhost:8085/luma/view_purchases`,
+        `http://localhost:8085/luma/view_items`,
         requestOptions,
         
       )

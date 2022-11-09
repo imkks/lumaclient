@@ -8,6 +8,8 @@ export const AuthProvider=({children})=>{
      const [user, setUser] = useState(null);
      const login=(employeeId,password)=>{
          //make api call
+         let myHeaders = new Headers();
+myHeaders.append("Content-Type", "application/json");
          let raw = JSON.stringify({
             "employeeId": employeeId,
             "password": password
@@ -16,6 +18,7 @@ export const AuthProvider=({children})=>{
           let requestOptions = {
             method: 'POST',
             body: raw,
+            headers:myHeaders,
             redirect: 'follow'
           };
          
