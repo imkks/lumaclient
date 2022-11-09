@@ -25,7 +25,7 @@ myHeaders.append("Content-Type", "application/json");
             
           fetch("http://localhost:8085/luma/login", requestOptions)
   .then(response => response.json())
-  .then(result => {console.log(result);setUser("krishna");})
+  .then(result => {console.log(result);setUser(result);})
   .catch(error => console.log('error', error));
           
          

@@ -1,8 +1,10 @@
+import { useAuth } from "../contexts/AuthContext";
 import useFetch from "../hooks/useFetch";
 
 const Loans = () => {
+    const {user}=useAuth()
     let raw = JSON.stringify({
-        "employeeId": "k04"
+        "employeeId": user?.employeeId
       });
       
       let requestOptions = {
