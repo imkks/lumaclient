@@ -35,7 +35,9 @@ myHeaders.append("Content-Type", "application/json");
       // console.log(typeof(items))
     return (
         <div>
-            List of Items Purchased
+          <h3>employeeId:{user}</h3>
+          <div className="table">
+            <h2>List of Items Purchased</h2>
       <tr>
                 <th>category</th>
                 <th>description</th>
@@ -44,6 +46,7 @@ myHeaders.append("Content-Type", "application/json");
             </tr>
 
       {myitems}
+      </div>
         </div>
     )
 }

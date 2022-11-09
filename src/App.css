@@ -37,3 +37,12 @@ input {
 {
   display: flex;
 }
+th,td{
+  padding: 15px;
+}
+.table{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

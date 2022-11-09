@@ -39,7 +39,10 @@ myHeaders.append("Content-Type", "application/json");
       const myitems=items.map(item=><tr key={item.loanId}><td>{item.loanType}</td><td>{item.durationInYears}</td><td>{item.card_issue_date}</td></tr>)
     return (
         <div>
+          <h3>employeeId:{user}</h3>
+          <div className="table">
            <h2>List of Loan Application</h2> 
+           
             <tr>
                 <th>loanType</th>
                 <th>duration</th>
@@ -47,7 +50,7 @@ myHeaders.append("Content-Type", "application/json");
 
             </tr>
            {myitems}
-     
+           </div>
         </div>
     )
 }
