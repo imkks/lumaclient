@@ -19,10 +19,10 @@ function App() {
       <AuthProvider>
       <Routes>
         <Route path="/" element={<RequiredAuth><Home/></RequiredAuth>}></Route>
-        <Route path="/loan" element={<ApplyLoan/>}></Route>
+        <Route path="/loan" element={<RequiredAuth><ApplyLoan/></RequiredAuth>}></Route>
         <Route path="/login" element={<Login/>}></Route>
-        <Route path="/items" element={<Items/>}></Route>
-        <Route path="/loans" element={<Loans/>}></Route>
+        <Route path="/items" element={<RequiredAuth><Items/></RequiredAuth>}></Route>
+        <Route path="/loans" element={<RequiredAuth><Loans/></RequiredAuth>}></Route>
 
       </Routes>
       </AuthProvider>

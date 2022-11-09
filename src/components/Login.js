@@ -1,17 +1,21 @@
 import { useRef, useState } from 'react'
-import { Navigate } from 'react-router-dom'
+import { Navigate, useNavigate } from 'react-router-dom'
 import { useAuth } from '../contexts/AuthContext'
 import styles from './Login.module.css'
 const Login = () => {
     const formRef = useRef()
     const [error, seterror] = useState(false)
-    const {user,login}=useAuth()
+    const navigate=useNavigate();
+    const {user,login,setUser}=useAuth()
     const submitHandler=async (e)=>{
         e.preventDefault();
-        await login(formRef.current[0].value,formRef.current[1].value);
-        if(user)
+       let empoyeeId=await login(formRef.current[0].value,formRef.current[1].value);
+       setUser(empoyeeId)
+        // console.log(user)
+        if(empoyeeId)
         {
-            return <Navigate to='/home'/>
+            // console.log("hei")
+            navigate('/')
             
         }
         else
