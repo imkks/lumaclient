@@ -11,7 +11,7 @@ const Items = () => {
         redirect: 'follow'
       };
       const { loading, error, value } = useFetch(
-        `localhost:8085/luma/view_cards`,
+        `http://localhost:8085/luma/view_cards`,
         requestOptions,
         
       )

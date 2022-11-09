@@ -20,7 +20,7 @@ export const AuthProvider=({children})=>{
           };
          
             
-          fetch("localhost:8085/luma/login", requestOptions)
+          fetch("http://localhost:8085/luma/login", requestOptions)
   .then(response => response.json())
   .then(result => {console.log(result);setUser("krishna");})
   .catch(error => console.log('error', error));
