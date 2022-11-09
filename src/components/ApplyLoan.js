@@ -31,7 +31,7 @@ let requestOptions = {
   redirect: 'follow'
 };
 
-let response=await fetch("localhost:8085/luma/loan_apply", requestOptions)
+let response=await fetch("http://localhost:8085/luma/loan_apply", requestOptions)
 let result=response.json();
 return result;
     }
